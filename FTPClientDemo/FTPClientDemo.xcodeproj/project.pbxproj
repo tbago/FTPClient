@@ -13,6 +13,7 @@
 		E81013FE1B62217700EC86DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81013FC1B62217700EC86DB /* Main.storyboard */; };
 		E81014001B62217700EC86DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81013FF1B62217700EC86DB /* Images.xcassets */; };
 		E81014031B62217700EC86DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81014011B62217700EC86DB /* LaunchScreen.xib */; };
+		E865D4981B62249E0055E0F7 /* FTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E865D4971B62249E0055E0F7 /* FTPClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		E81013FD1B62217700EC86DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E81013FF1B62217700EC86DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E81014021B62217700EC86DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E865D4961B62249E0055E0F7 /* FTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPClient.h; sourceTree = "<group>"; };
+		E865D4971B62249E0055E0F7 /* FTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		E81013E61B62217700EC86DB = {
 			isa = PBXGroup;
 			children = (
+				E865D4951B6224640055E0F7 /* FTPClient */,
 				E81013F11B62217700EC86DB /* FTPClientDemo */,
 				E81013F01B62217700EC86DB /* Products */,
 			);
@@ -58,13 +62,10 @@
 		E81013F11B62217700EC86DB /* FTPClientDemo */ = {
 			isa = PBXGroup;
 			children = (
-				E81013F61B62217700EC86DB /* AppDelegate.h */,
-				E81013F71B62217700EC86DB /* AppDelegate.m */,
 				E81013F91B62217700EC86DB /* ViewController.h */,
 				E81013FA1B62217700EC86DB /* ViewController.m */,
 				E81013FC1B62217700EC86DB /* Main.storyboard */,
 				E81013FF1B62217700EC86DB /* Images.xcassets */,
-				E81014011B62217700EC86DB /* LaunchScreen.xib */,
 				E81013F21B62217700EC86DB /* Supporting Files */,
 			);
 			path = FTPClientDemo;
@@ -73,10 +74,23 @@
 		E81013F21B62217700EC86DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E81013F61B62217700EC86DB /* AppDelegate.h */,
+				E81013F71B62217700EC86DB /* AppDelegate.m */,
+				E81014011B62217700EC86DB /* LaunchScreen.xib */,
 				E81013F31B62217700EC86DB /* Info.plist */,
 				E81013F41B62217700EC86DB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E865D4951B6224640055E0F7 /* FTPClient */ = {
+			isa = PBXGroup;
+			children = (
+				E865D4961B62249E0055E0F7 /* FTPClient.h */,
+				E865D4971B62249E0055E0F7 /* FTPClient.m */,
+			);
+			name = FTPClient;
+			path = ../FTPClient;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +166,7 @@
 				E81013FB1B62217700EC86DB /* ViewController.m in Sources */,
 				E81013F81B62217700EC86DB /* AppDelegate.m in Sources */,
 				E81013F51B62217700EC86DB /* main.m in Sources */,
+				E865D4981B62249E0055E0F7 /* FTPClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
