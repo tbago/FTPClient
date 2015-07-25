@@ -13,6 +13,7 @@
 		E81013FE1B62217700EC86DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81013FC1B62217700EC86DB /* Main.storyboard */; };
 		E81014001B62217700EC86DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E81013FF1B62217700EC86DB /* Images.xcassets */; };
 		E81014031B62217700EC86DB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E81014011B62217700EC86DB /* LaunchScreen.xib */; };
+		E858D29D1B63160500827E91 /* TestImage1.png in Resources */ = {isa = PBXBuildFile; fileRef = E858D29C1B63160500827E91 /* TestImage1.png */; };
 		E865D4981B62249E0055E0F7 /* FTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E865D4971B62249E0055E0F7 /* FTPClient.m */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		E81013FD1B62217700EC86DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E81013FF1B62217700EC86DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E81014021B62217700EC86DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E858D29C1B63160500827E91 /* TestImage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TestImage1.png; sourceTree = "<group>"; };
 		E865D4961B62249E0055E0F7 /* FTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPClient.h; sourceTree = "<group>"; };
 		E865D4971B62249E0055E0F7 /* FTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 		E81013F21B62217700EC86DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E858D29C1B63160500827E91 /* TestImage1.png */,
 				E81013F61B62217700EC86DB /* AppDelegate.h */,
 				E81013F71B62217700EC86DB /* AppDelegate.m */,
 				E81014011B62217700EC86DB /* LaunchScreen.xib */,
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E81013FE1B62217700EC86DB /* Main.storyboard in Resources */,
+				E858D29D1B63160500827E91 /* TestImage1.png in Resources */,
 				E81014031B62217700EC86DB /* LaunchScreen.xib in Resources */,
 				E81014001B62217700EC86DB /* Images.xcassets in Resources */,
 			);
