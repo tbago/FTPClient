@@ -31,4 +31,6 @@
 - (void)uploadToFTPServer:(NSString *) uploadFilePath
                  progress:(void (^)(NSInteger uploadedSize, NSInteger totalSize)) progress
                completion:(void (^)(BOOL finished, NSString *messageString)) completion;
+
+- (void)canceled;
 @end

@@ -29,6 +29,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *userNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 @property (weak, nonatomic) IBOutlet UILabel    *statusLabel;
+@property (weak, nonatomic) IBOutlet UIButton   *cancelButton;
 
 @property (strong, nonatomic) FTPClient         *ftpClient;
 @end
@@ -47,15 +48,17 @@
 - (IBAction)uploadButtonClick:(UIButton *)sender {
     [self saveInputInfo];
     
-    NSString *needUploadedFile = [self pathForTestResource:@"TestImage1.png"];
+    NSString *needUploadedFile = [self pathForTestResource:@"TestImage1.bin"];
     
     self.ftpClient = [[FTPClient alloc] initWithFTPServer:self.FTPServerTextField.text
                                                        userName:self.userNameTextField.text
                                                        password:self.passwordTextField.text];
     __weak ViewController *weakSelf = self;
     
+    self.cancelButton.enabled = YES;
     [self.ftpClient uploadToFTPServer:needUploadedFile progress:^(NSInteger uploadedSize, NSInteger totalSize) {
         weakSelf.statusLabel.text = [NSString stringWithFormat:@"uploaded:%f%%", uploadedSize * 100.0 / totalSize];
+        NSLog(@"upload size:%ld", uploadedSize);
     } completion:^(BOOL finished, NSString *messageString) {
         if (finished) {
             weakSelf.statusLabel.text = @"Success";
@@ -72,10 +75,15 @@
     self.FTPServerTextField.text    = [userDefaults objectForKey:@"FTPServer"];
     self.userNameTextField.text     = [userDefaults objectForKey:@"UserName"];
     self.passwordTextField.text     = [userDefaults objectForKey:@"Password"];
+    self.cancelButton.enabled       = NO;
 }
 
 - (IBAction)backgroundTouchDown:(UITapGestureRecognizer *)sender {
     [self.view endEditing:YES];
+}
+
+- (IBAction)cancelButtonClick:(id)sender {
+    [self.ftpClient canceled];
 }
 
 #pragma mark - helper function

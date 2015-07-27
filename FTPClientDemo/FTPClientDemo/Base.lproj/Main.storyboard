@@ -65,6 +65,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QuF-D8-rKD">
+                                <rect key="frame" x="276" y="216" width="48" height="30"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0NQ-ln-Fce"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -78,7 +87,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Wij-9M-P3U" secondAttribute="trailing" constant="5" id="Kv0-Fz-mUn"/>
                             <constraint firstItem="bEh-aw-1qT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="LCz-WR-dg6"/>
                             <constraint firstItem="YjA-6m-XqW" firstAttribute="top" secondItem="b3z-ID-3Cu" secondAttribute="bottom" constant="31" id="LQ7-Pu-wDU"/>
+                            <constraint firstAttribute="centerX" secondItem="QuF-D8-rKD" secondAttribute="centerX" id="VBh-lk-zS9"/>
                             <constraint firstItem="Sip-bb-rB1" firstAttribute="leading" secondItem="b3z-ID-3Cu" secondAttribute="trailing" constant="5" id="XYS-fz-sCT"/>
+                            <constraint firstItem="QuF-D8-rKD" firstAttribute="top" secondItem="YjA-6m-XqW" secondAttribute="bottom" constant="8" id="aHr-fO-YNn"/>
                             <constraint firstItem="Wij-9M-P3U" firstAttribute="width" secondItem="b3z-ID-3Cu" secondAttribute="width" id="bsd-DR-zK6"/>
                             <constraint firstItem="i0Y-qX-f4l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="d0z-f6-EHs"/>
                             <constraint firstItem="b3z-ID-3Cu" firstAttribute="leading" secondItem="i0Y-qX-f4l" secondAttribute="trailing" constant="5" id="dM4-WC-JLT"/>
@@ -97,6 +108,7 @@
                     <navigationItem key="navigationItem" id="X9o-qW-oLl"/>
                     <connections>
                         <outlet property="FTPServerTextField" destination="bEh-aw-1qT" id="sic-Ik-Mal"/>
+                        <outlet property="cancelButton" destination="QuF-D8-rKD" id="V5n-Eg-8Qu"/>
                         <outlet property="passwordTextField" destination="Wij-9M-P3U" id="lCh-w6-2zQ"/>
                         <outlet property="statusLabel" destination="eW5-6k-lEG" id="xQN-T9-KAk"/>
                         <outlet property="userNameTextField" destination="b3z-ID-3Cu" id="bKu-YO-sD1"/>

@@ -26,8 +26,8 @@ typedef void (^ProcessBlock)(NSInteger uploadedSize, NSInteger totalSize);
 typedef void (^CompleteBlock)(BOOL finished, NSString *messageString);
 
 enum {
-    kSendBufferSize = 32768
-}; ///<everytime max transfer buffer size
+    kSendBufferSize = 32768        ///<everytime max transfer buffer size
+};
 
 @interface FTPClient() <NSStreamDelegate>
 
@@ -146,6 +146,9 @@ enum {
     }
 }
 
+- (void)canceled {
+    [self stopSendToFTPServer:@"Canceled"];
+}
 #pragma mark - private function
 
 - (void)stopSendToFTPServer:(NSString *) statusString {
